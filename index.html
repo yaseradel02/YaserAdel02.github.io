@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yaser Abdulla | Electronics Engineer, Data Science, CAPM</title>
+<meta name="description" content="Portfolio of Yaser Abdulla: an electronics engineer applying an engineering foundation to data science, analytical tools and interactive applications.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yaser Abdulla | Electronics Engineer, Data Science, CAPM">
+<meta property="og:description" content="Applying an electronics engineering foundation to data science to build practical analytical tools and interactive applications.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0B132B;--panel:#1C2541;--text:#E8EEF9;--muted:#A9B6D3;
+  --accent:#00F5D4;--accent2:#00BBF9;--line:rgba(169,182,211,.28);--grid:rgba(0,187,249,.07);
+  --on-accent:#0B132B;--bar:rgba(11,19,43,.94);
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+[data-theme="light"]{
+  --bg:#F1F5FA;--panel:#FFFFFF;--text:#0B132B;--muted:#44506E;
+  --accent:#00696F;--accent2:#005F96;--line:rgba(11,19,43,.22);--grid:rgba(0,95,150,.08);
+  --on-accent:#FFFFFF;--bar:rgba(241,245,250,.95);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{font-family:var(--sans);font-size:1.0625rem;line-height:1.65;color:var(--text);background-color:var(--bg);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:48px 48px;transition:background-color .3s,color .3s}
+a{color:var(--accent);text-underline-offset:3px}
+a:hover{color:var(--accent2)}
+:focus-visible{outline:3px solid var(--accent2);outline-offset:3px}
+.wrap{width:100%;max-width:1120px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--accent);color:var(--on-accent);padding:8px 14px;z-index:20}
+.skip:focus{left:8px}
+
+/* top bar */
+header{position:sticky;top:0;z-index:10;background:var(--bar);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
+.bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:4px 16px;padding-top:10px;padding-bottom:10px}
+.brand{font-weight:700;letter-spacing:.02em;color:var(--text);text-decoration:none}
+nav{order:3;width:100%;overflow-x:auto}
+nav ul{display:flex;gap:4px;list-style:none;white-space:nowrap}
+nav a{display:block;padding:8px 12px;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s}
+nav a:hover,nav a.on{color:var(--text);border-color:var(--accent)}
+.theme{display:flex;align-items:center;gap:10px;background:none;border:0;color:var(--muted);font:inherit;font-size:.9375rem;cursor:pointer;padding:6px 0}
+.theme .t{width:40px;height:22px;border:1px solid var(--muted);position:relative;display:block}
+.theme .t::after{content:"";position:absolute;top:3px;left:3px;width:14px;height:14px;background:var(--accent);transition:transform .25s}
+[data-theme="light"] .theme .t::after{transform:translateX(18px)}
+.theme:hover{color:var(--text)}
+@media(min-width:800px){nav{order:0;width:auto;overflow:visible}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.art{position:absolute;inset:0;width:100%;height:100%;color:var(--accent2);pointer-events:none}
+.art g{transition:opacity .5s}
+.art .chart{opacity:0}
+[data-lens="data"] .art .chart{opacity:1}
+[data-lens="data"] .art .circuit{opacity:0}
+.hero .wrap{position:relative;padding-top:72px;padding-bottom:64px}
+.role{display:flex;flex-wrap:wrap;gap:6px 0;list-style:none;margin-bottom:20px;color:var(--accent);font-weight:600}
+.role li+li{border-left:1px solid var(--line);margin-left:14px;padding-left:14px}
+h1{font-size:clamp(2.75rem,10vw,6.5rem);line-height:1;font-weight:700;letter-spacing:-.03em;margin-bottom:24px}
+.lead{max-width:34em;font-size:1.25rem;color:var(--text);margin-bottom:32px}
+.btn{display:inline-block;padding:12px 22px;font-weight:600;text-decoration:none;border:1px solid var(--accent);transition:background .2s,color .2s}
+.btn.pri{background:var(--accent);color:var(--on-accent)}
+.btn.pri:hover{background:transparent;color:var(--accent)}
+.btn.sec{color:var(--accent)}
+.btn.sec:hover{background:var(--accent);color:var(--on-accent)}
+
+/* circuit toggle */
+.lens{margin-top:48px;display:flex;flex-wrap:wrap;align-items:center;gap:16px 20px;background:var(--panel);border:1px solid var(--line);padding:16px 20px;max-width:640px}
+.lens .lab{font-family:var(--mono);font-size:.9375rem;color:var(--muted);background:none;border:0;cursor:pointer;padding:4px 0}
+.lens .lab.on{color:var(--accent)}
+.sw{position:relative;width:96px;height:40px;background:var(--bg);border:1px solid var(--muted);cursor:pointer;flex:none}
+.sw::before{content:"";position:absolute;left:8px;right:8px;top:50%;height:1px;background:var(--line);box-shadow:0 -8px 0 var(--line),0 8px 0 var(--line)}
+.sw i{position:absolute;top:3px;left:3px;width:44px;height:32px;background:var(--panel);border:2px solid var(--accent);transition:transform .3s cubic-bezier(.6,0,.2,1)}
+.sw i::after{content:"";position:absolute;left:50%;top:6px;bottom:6px;width:2px;background:var(--accent);transform:translateX(-50%)}
+.sw[aria-checked="true"] i{transform:translateX(46px)}
+.sw:hover{border-color:var(--accent)}
+.read{flex-basis:100%;font-family:var(--mono);font-size:.9375rem;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+.read b{color:var(--accent);font-weight:500}
+
+/* sections */
+section.s{padding:72px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.15;letter-spacing:-.02em;margin-bottom:32px;display:flex;align-items:center;gap:16px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+h3{font-size:1.25rem;line-height:1.3}
+.about p{max-width:42em;font-size:1.1875rem}
+
+.skills{display:grid;gap:24px}
+.skills div{border-top:2px solid var(--accent2);padding-top:14px}
+.skills h3{margin-bottom:12px}
+.skills ul{list-style:none}
+.skills li{padding:8px 0 8px 18px;border-bottom:1px solid var(--line);color:var(--muted);position:relative;transition:color .25s}
+.skills li::before{content:"";position:absolute;left:0;top:50%;width:8px;height:8px;margin-top:-4px;border:1px solid var(--muted);transition:background .25s,border-color .25s}
+.skills li.hit{color:var(--text)}
+.skills li.hit::before{background:var(--accent);border-color:var(--accent)}
+@media(min-width:768px){.skills{grid-template-columns:repeat(3,1fr)}}
+
+.projects{display:grid;gap:24px}
+.proj{background:var(--panel);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;gap:14px}
+.proj.main{border-left:4px solid var(--accent)}
+.proj p{max-width:38em}
+.tools{color:var(--muted);font-size:.9375rem;border-top:1px solid var(--line);padding-top:12px}
+.tools span{color:var(--text);font-weight:600}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:auto}
+.shot{aspect-ratio:16/9;background:var(--bg);border:1px solid var(--line);overflow:hidden;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:24px 24px}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+@media(min-width:900px){.projects{grid-template-columns:1.25fr 1fr}.proj.main{padding:36px}}
+
+.tl{list-style:none;border-left:1px solid var(--line);margin-left:6px}
+.tl li{position:relative;padding:0 0 32px 28px;display:grid;gap:2px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-6px;top:8px;width:11px;height:11px;background:var(--bg);border:2px solid var(--accent)}
+.tl time{font-family:var(--mono);color:var(--accent);font-size:.9375rem}
+.tl span{font-size:1.125rem;font-weight:500}
+@media(min-width:768px){.tl li{grid-template-columns:120px 1fr;gap:16px}}
+
+.contact ul{list-style:none;max-width:560px}
+.contact li{display:flex;flex-wrap:wrap;gap:4px 24px;padding:14px 0;border-bottom:1px solid var(--line)}
+.contact li span{width:90px;color:var(--muted)}
+.contact a{font-weight:500;overflow-wrap:anywhere}
+
+footer{padding:32px 0;color:var(--muted);font-size:.9375rem}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important;animation:none!important}
+}
+@media(max-width:480px){.wrap{padding:0 18px}.hero .wrap{padding-top:48px}.proj{padding:22px}}
+</style>
+</head>
+<body data-lens="circuit">
+<a class="skip" href="#main">Skip to content</a>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#top">Yaser Abdulla</a>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-label="Switch to light mode"><span id="themeName">Dark</span><span class="t" aria-hidden="true"></span></button>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" id="top" aria-label="Introduction">
+    <svg class="art" viewBox="0 0 1200 640" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5">
+      <g class="circuit" opacity=".35">
+        <path d="M1200 90H980V180H860V300H720"/>
+        <path d="M1200 230H1080V360H940V470H760"/>
+        <path d="M1200 420H1120V540H900V600"/>
+        <path d="M1200 40H1040V120H900"/>
+        <path d="M980 180V250H1040"/>
+        <rect x="700" y="284" width="32" height="32"/>
+        <rect x="744" y="454" width="32" height="32"/>
+        <rect x="1030" y="236" width="20" height="28"/>
+        <circle cx="980" cy="90" r="6"/><circle cx="860" cy="300" r="6"/><circle cx="1080" cy="360" r="6"/>
+        <circle cx="940" cy="470" r="6"/><circle cx="1120" cy="540" r="6"/><circle cx="900" cy="120" r="6"/>
+      </g>
+      <g class="chart" opacity=".4">
+        <path d="M640 60V560H1180"/>
+        <path d="M640 160H1180M640 260H1180M640 360H1180M640 460H1180" stroke-dasharray="4 8" opacity=".6"/>
+        <path d="M740 60V560M840 60V560M940 60V560M1040 60V560M1140 60V560" stroke-dasharray="4 8" opacity=".6"/>
+        <polyline points="660,480 740,430 820,450 900,340 980,370 1060,240 1140,180" stroke-width="2.5"/>
+        <circle cx="740" cy="430" r="5"/><circle cx="900" cy="340" r="5"/><circle cx="1060" cy="240" r="5"/><circle cx="1140" cy="180" r="5"/>
+      </g>
+    </svg>
+    <div class="wrap">
+      <ul class="role" aria-label="Roles">
+        <li>Electronics Engineer</li><li>Data Science</li><li>CAPM</li>
+      </ul>
+      <h1>Yaser Abdulla</h1>
+      <p class="lead">Applying an electronics engineering foundation to data science to build practical analytical tools and interactive applications.</p>
+      <a class="btn pri" href="#projects">View my work</a>
+
+      <div class="lens" role="group" aria-label="Circuit toggle: choose a view">
+        <button class="lab on" id="labC" type="button">Circuit</button>
+        <button class="sw" id="lens" type="button" role="switch" aria-checked="false" aria-label="Data view"><i></i></button>
+        <button class="lab" id="labD" type="button">Data</button>
+        <p class="read" id="read" aria-live="polite"><b>Circuit view:</b> systems thinking, integration and delivery. Related skills are marked below.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="s about wrap" id="about">
+    <h2>About</h2>
+    <p>I hold a BSc in Electronics Engineering (2024) and a CAPM certification (2025), and completed intensive training at the General Assembly Data Science Bootcamp in 2026. My focus is on combining engineering principles with software and data analytics to solve practical problems.</p>
+  </section>
+
+  <section class="s wrap" id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div>
+        <h3>Data and analysis</h3>
+        <ul>
+          <li data-v="data">Python</li>
+          <li data-v="data">SQL</li>
+          <li data-v="data">Data Analysis</li>
+          <li data-v="data">Data Visualization</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Applications and integration</h3>
+        <ul>
+          <li data-v="circuit">Streamlit</li>
+          <li data-v="circuit">LLM Integration</li>
+          <li data-v="circuit">API Integration</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Engineering and delivery</h3>
+        <ul>
+          <li data-v="circuit">Electronics Engineering</li>
+          <li data-v="circuit">Project Management (CAPM)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="s wrap" id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <article class="proj main">
+        <h3>Recipe Manager</h3>
+        <p>Developed an interactive Streamlit application that processes structured CSV data, connects with external APIs, and integrates LLM capabilities to streamline recipe selection and generation.</p>
+        <p class="tools"><span>Tools:</span> Python, Streamlit, LLMs, APIs, Pandas</p>
+        <div class="actions">
+          <a class="btn pri" href="https://recipe-manager-hd7wuh6i8vepa8t523gmgx.streamlit.app/" target="_blank" rel="noopener">Live Demo</a>
+        </div>
+      </article>
+      <article class="proj">
+        <div class="shot">
+          <img src="images/project-2.png" alt="Charts from the exploratory analysis of the Washington State Electric Vehicle dataset" loading="lazy" onerror="this.style.display='none'">
+        </div>
+        <h3>EV Analysis</h3>
+        <p>Conducted an exploratory data analysis on the Washington State Electric Vehicle dataset, evaluating market trends with a specific analytical focus on Tesla adoption patterns across counties.</p>
+        <p class="tools"><span>Tools:</span> Python, Pandas, Matplotlib, Seaborn, Data Visualization</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="s wrap" id="education">
+    <h2>Education and certifications</h2>
+    <ol class="tl">
+      <li><time datetime="2024">2024</time><span>BSc in Electronics Engineering</span></li>
+      <li><time datetime="2025">2025</time><span>Certified Associate in Project Management (CAPM)</span></li>
+      <li><time datetime="2026">2026</time><span>General Assembly Data Science Bootcamp</span></li>
+    </ol>
+  </section>
+
+  <section class="s contact wrap" id="contact">
+    <h2>Contact</h2>
+    <ul>
+      <li><span>Email</span><a href="mailto:yaseradel02@gmail.com">yaseradel02@gmail.com</a></li>
+      <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/yaser-abdulla/" target="_blank" rel="noopener">linkedin.com/in/yaser-abdulla</a></li>
+      <li><span>GitHub</span><a href="https://github.com/yaseradel02" target="_blank" rel="noopener">github.com/yaseradel02</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="year">2026</span> Yaser Abdulla</div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, body=document.body;
+  var sw=document.getElementById('lens'), labC=document.getElementById('labC'), labD=document.getElementById('labD'), read=document.getElementById('read');
+  var msgs={
+    circuit:'<b>Circuit view:</b> systems thinking, integration and delivery. Related skills are marked below.',
+    data:'<b>Data view:</b> analysis, querying and visualization. Related skills are marked below.'
+  };
+  function setLens(v){
+    body.setAttribute('data-lens',v);
+    sw.setAttribute('aria-checked',v==='data'?'true':'false');
+    labC.classList.toggle('on',v==='circuit');
+    labD.classList.toggle('on',v==='data');
+    read.innerHTML=msgs[v];
+    var items=document.querySelectorAll('.skills li');
+    for(var i=0;i<items.length;i++){items[i].classList.toggle('hit',items[i].getAttribute('data-v')===v);}
+  }
+  sw.addEventListener('click',function(){setLens(body.getAttribute('data-lens')==='circuit'?'data':'circuit');});
+  labC.addEventListener('click',function(){setLens('circuit');});
+  labD.addEventListener('click',function(){setLens('data');});
+  setLens('circuit');
+
+  var tb=document.getElementById('theme'), tn=document.getElementById('themeName');
+  function setTheme(t){
+    root.setAttribute('data-theme',t);
+    tn.textContent=t==='dark'?'Dark':'Light';
+    tb.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');
+    try{localStorage.setItem('theme',t);}catch(e){}
+  }
+  var saved=null;
+  try{saved=localStorage.getItem('theme');}catch(e){}
+  if(saved==='light'||saved==='dark'){setTheme(saved);}
+  tb.addEventListener('click',function(){setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark');});
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  var links=document.querySelectorAll('nav a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){
+        if(e.isIntersecting){
+          for(var i=0;i<links.length;i++){links[i].classList.toggle('on',links[i].getAttribute('href')==='#'+e.target.id);}
+        }
+      });
+    },{rootMargin:'-40% 0px -55% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){io.observe(s);});
+  }
+})();
+</script>
+</body>
+</html>
