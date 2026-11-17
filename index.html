@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark" data-view="analyst">
+<html lang="en" data-theme="light" data-view="analyst">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yaser Abdulla | Electronics Engineer, Data Science, CAPM</title>
 <meta name="description" content="Portfolio of Yaser Abdulla: an electronics engineer applying engineering foundations to data science, building practical analytical tools and interactive applications.">
 <meta property="og:title" content="Yaser Abdulla | Electronics Engineer, Data Science, CAPM">
-<meta property="og:description" content="Applying an electronics engineering foundation alongside data science skills to develop practical analytical tools and interactive applications.">
+<meta property="og:description" content="My projects often start with a simple question. Can a sensor capture it? Can a model recognize it? Can someone use the result? I build prototypes and apps to find out.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,43 +140,41 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 html{scroll-behavior:auto}
 *,*::before,*::after{transition:none!important}
 }
+
+:root{--bg:#101818;--panel:#172222;--line:#344342;--text:#f4f4e9;--muted:#b2bfba;--a1:#bcf67b;--a2:#a3d8b4;--btnbg:#bcf67b;--btnfg:#101818;--grid:rgba(167,199,174,.055)}
+[data-theme="light"]{--bg:#f6f7ef;--panel:#edf1e6;--line:#bfcbbb;--text:#172420;--muted:#485b50;--a1:#38691e;--a2:#315c46;--btnbg:#284c32;--btnfg:white;--grid:rgba(55,80,45,.07)}
+.wrap{max-width:1220px}.wrap.sec{padding:60px 24px}.bar{min-height:70px}.brand{display:flex;align-items:center;gap:10px}.brand i{display:grid;place-items:center;background:var(--a1);color:var(--bg);width:33px;height:33px;border-radius:7px;font:700 .86rem var(--mono)}
+.hero .wrap{padding-top:56px;padding-bottom:48px}.location,.work small{color:var(--a2);font:500 .78rem var(--mono);letter-spacing:.07em;text-transform:uppercase}.location{margin:0 0 18px}.hero h1{font-size:clamp(4.3rem,8.4vw,7.6rem);letter-spacing:-.072em}.hero h1 .dot{display:inline;color:var(--a1)}.role{font-size:1.07rem;margin-top:19px}.statement{max-width:39ch;font-size:1.06rem;color:var(--muted)}.hero svg{width:51%;right:1%;height:88%;top:6%}.hero svg .trace{stroke:var(--line)}.hero svg .chip{fill:var(--panel);stroke:var(--a2)}.hero svg .wave{stroke:var(--a1);stroke-width:3}.hero svg text{fill:var(--a2);stroke:none;font:13px var(--mono);letter-spacing:3px}.actions{margin-top:24px}.btn,.track,.sw{border-radius:5px}.readout{max-width:fit-content;background:none;border:0;padding:0;margin-top:24px;font-size:.77rem;color:var(--muted)}.readout b{display:inline;margin-right:10px}.sec h2{border:0;padding:0;letter-spacing:-.045em}.works{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.work{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:25px;display:flex;flex-direction:column}.work:first-child,.all{grid-column:1/-1}.work:first-child{border-left:3px solid var(--a1)}.work h3{margin:10px 0 14px;font:600 1.55rem/1.15 var(--head);letter-spacing:-.035em}.work:first-child h3{font-size:2.2rem}.work p{color:var(--muted);font-size:1rem;line-height:1.55}.work .stack{font:.79rem/1.65 var(--mono);margin:auto 0 0;padding-top:10px;color:var(--a2)}.worklinks{display:flex;gap:18px;margin-top:16px}.worklinks a,.all{font-weight:600;color:var(--text);text-underline-offset:5px;text-decoration-color:var(--a2)}.all{justify-self:start;margin-top:8px}
+@media(max-width:799px){.bar{min-height:56px}.hero svg{width:48%;right:0;height:220px;top:2%;opacity:.65}.hero .wrap{padding:36px 24px}.hero h1{width:fit-content}.wrap.sec{padding:40px 24px}.works{grid-template-columns:1fr}.actions{gap:12px}.top nav a{font-size:.85rem;padding:8px}.readout b{display:block}}
+@media(max-width:480px){.hero svg{width:35%;height:145px;top:47px}.hero .statement{font-size:1rem}.work{padding:20px}.wrap{padding-left:18px;padding-right:18px}}
+
 </style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap bar">
-    <a class="brand" href="#top">Yaser Abdulla</a>
+    <a class="brand" href="#top"><i aria-hidden="true">YA</i> Yaser Abdulla</a>
     <nav aria-label="Primary">
       <ul>
-        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li><li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        
         <li><a href="#background">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <button type="button" class="theme" id="theme" role="switch" aria-checked="false"><span>Light mode</span><span class="track" aria-hidden="true"></span></button>
+    <button type="button" class="theme" id="theme" role="switch" aria-checked="false"><span>Dark mode</span><span class="track" aria-hidden="true"></span></button>
   </div>
 </header>
 
 <main id="main">
   <section class="hero" id="top" aria-label="Introduction">
-    <svg viewBox="0 0 600 500" preserveAspectRatio="xMaxYMid slice" aria-hidden="true" focusable="false">
-      <circle cx="430" cy="250" r="96"/>
-      <path d="M430 0V500"/>
-      <path class="t1" d="M0 90H180V150H330V60H600"/>
-      <path class="t2" d="M0 400H120V330H270V440H600"/>
-      <path d="M600 250H526"/>
-      <path d="M60 250H240V210"/>
-      <circle class="pad" cx="180" cy="90" r="5"/><circle class="pad" cx="330" cy="150" r="5"/>
-      <circle class="pad" cx="120" cy="400" r="5"/><circle class="pad" cx="270" cy="330" r="5"/>
-      <circle class="pad" cx="240" cy="210" r="5"/>
-    </svg>
+    <svg viewBox="0 0 600 460" aria-hidden="true"><g><path class="trace t0" d="M237 154 H196 l-36 -36 H46"/><circle class="pad" cx="46" cy="118" r="3"/><path class="trace t1" d="M237 166 H192 l-38 -38 H67"/><circle class="pad" cx="67" cy="128" r="3"/><path class="trace t2" d="M237 178 H188 l-40 -40 H88"/><circle class="pad" cx="88" cy="138" r="3"/><path class="trace t0" d="M237 190 H184 l-42 -42 H109"/><circle class="pad" cx="109" cy="148" r="3"/><path class="trace t1" d="M237 202 H180 l-44 -44 H46"/><circle class="pad" cx="46" cy="158" r="3"/><path class="trace t2" d="M237 214 H176 l-46 -46 H67"/><circle class="pad" cx="67" cy="168" r="3"/><path class="trace t0" d="M237 226 H172 l-48 48 H88"/><circle class="pad" cx="88" cy="274" r="3"/><path class="trace t1" d="M237 238 H168 l-50 50 H109"/><circle class="pad" cx="109" cy="288" r="3"/><path class="trace t2" d="M237 250 H164 l-52 52 H46"/><circle class="pad" cx="46" cy="302" r="3"/><path class="trace t0" d="M237 262 H160 l-54 54 H67"/><circle class="pad" cx="67" cy="316" r="3"/><path class="trace t1" d="M237 274 H156 l-56 56 H88"/><circle class="pad" cx="88" cy="330" r="3"/><path class="trace t2" d="M237 286 H152 l-58 58 H109"/><circle class="pad" cx="109" cy="344" r="3"/><path class="trace t0" d="M237 298 H148 l-60 60 H46"/><circle class="pad" cx="46" cy="358" r="3"/></g><g transform="translate(600 460) rotate(180)"><path class="trace t0" d="M237 154 H196 l-36 -36 H46"/><circle class="pad" cx="46" cy="118" r="3"/><path class="trace t1" d="M237 166 H192 l-38 -38 H67"/><circle class="pad" cx="67" cy="128" r="3"/><path class="trace t2" d="M237 178 H188 l-40 -40 H88"/><circle class="pad" cx="88" cy="138" r="3"/><path class="trace t0" d="M237 190 H184 l-42 -42 H109"/><circle class="pad" cx="109" cy="148" r="3"/><path class="trace t1" d="M237 202 H180 l-44 -44 H46"/><circle class="pad" cx="46" cy="158" r="3"/><path class="trace t2" d="M237 214 H176 l-46 -46 H67"/><circle class="pad" cx="67" cy="168" r="3"/><path class="trace t0" d="M237 226 H172 l-48 48 H88"/><circle class="pad" cx="88" cy="274" r="3"/><path class="trace t1" d="M237 238 H168 l-50 50 H109"/><circle class="pad" cx="109" cy="288" r="3"/><path class="trace t2" d="M237 250 H164 l-52 52 H46"/><circle class="pad" cx="46" cy="302" r="3"/><path class="trace t0" d="M237 262 H160 l-54 54 H67"/><circle class="pad" cx="67" cy="316" r="3"/><path class="trace t1" d="M237 274 H156 l-56 56 H88"/><circle class="pad" cx="88" cy="330" r="3"/><path class="trace t2" d="M237 286 H152 l-58 58 H109"/><circle class="pad" cx="109" cy="344" r="3"/><path class="trace t0" d="M237 298 H148 l-60 60 H46"/><circle class="pad" cx="46" cy="358" r="3"/></g><path d="M248 143v-24l-36 -36V30 M248 316v24l-36 36v30"/><path d="M261 143v-24l-27 -36V38 M261 316v24l-27 36v30"/><path d="M274 143v-24l-18 -36V46 M274 316v24l-18 36v30"/><path d="M287 143v-24l-9 -36V30 M287 316v24l-9 36v30"/><path d="M300 143v-24l0 -36V38 M300 316v24l0 36v30"/><path d="M313 143v-24l9 -36V46 M313 316v24l9 36v30"/><path d="M326 143v-24l18 -36V30 M326 316v24l18 36v30"/><path d="M339 143v-24l27 -36V38 M339 316v24l27 36v30"/><path d="M352 143v-24l36 -36V46 M352 316v24l36 36v30"/><rect class="chip" x="231" y="140" width="138" height="176" rx="9"/><rect x="241" y="150" width="118" height="156" rx="5"/><circle class="pad" cx="253" cy="163" r="3"/><path class="wave" d="M254 228h17l7 -13 9 31 10 -55 12 68 9 -32h28"/><text x="300" y="281" text-anchor="middle">YA / 02</text></svg>
     <div class="wrap">
-      <h1><span>Yaser</span><span>Abdulla</span></h1>
-      <p class="role">Electronics Engineer | Data Science | CAPM</p>
-      <p class="statement">Applying an electronics engineering foundation alongside data science skills to develop practical analytical tools and interactive applications.</p>
+      <p class="location">Based in Bahrain</p><h1><span>Yaser</span><span>Abdulla<span class="dot">.</span></span></h1>
+      <p class="role">Electronics engineering &amp; data science</p>
+      <p class="statement">My projects often start with a simple question. Can a sensor capture it? Can a model recognize it? Can someone use the result? I build prototypes and apps to find out.</p>
       <div class="actions">
         <a class="btn" href="#projects">View my work</a>
         <div class="circuit" role="group" aria-label="Interface view">
@@ -186,18 +184,24 @@ html{scroll-behavior:auto}
         </div>
       </div>
       <div class="readout">
-        <p class="ro-e"><b>Foundation</b>BSc Electronics Engineering (2024) and CAPM (2025).</p>
-        <p class="ro-a"><b>Current focus</b>General Assembly Data Science Bootcamp (2026) and hands-on projects in Python and Streamlit.</p>
+        <p class="ro-e"><b>Hardware focus</b>Sensor integration · Arduino firmware · Bluetooth LE</p>
+        <p class="ro-a"><b>Data focus</b>Time series · Computer vision · Predictive modeling</p>
       </div>
     </div>
   </section>
 
+<section id="projects"><div class="wrap sec"><h2>Selected projects</h2><div class="works"><article class="work"><small>Embedded systems / time series</small><h3>Wearable Sleep Monitor</h3><p>Can wrist movement and heart rate reveal sleep stages? I aligned recordings from 47 participants across 253 nights, trained a temporal convolutional network, and evaluated it on people held out of training.</p><p>I also wrote Arduino firmware to transmit timestamped pulse and motion readings over Bluetooth LE.</p><p class="stack">Arduino Nano 33 IoT · MAX30102 · Keras</p><div class="worklinks"><a href="https://github.com/yaseradel02/Sleep-Monitor">Repository ↗</a></div></article>
+<article class="work"><small>Object detection</small><h3>Bahraini Currency Recognition</h3><p>Upload a photo or use a camera to identify Bahraini banknotes. My YOLO detector labels each detected note with its denomination and confidence.</p><p>On a 44-image test set, the model reached 98.4% mAP@50. The test set contained no coins.</p><p class="stack">YOLO26s · Roboflow · Streamlit</p><div class="worklinks"><a href="https://bahraini-currency-recognition.streamlit.app/">Try the app ↗</a><a href="https://github.com/yaseradel02/Bahraini-Currency-Recognition">Repository ↗</a></div></article>
+<article class="work"><small>Image retrieval / team project</small><h3>SketchMatch</h3><p>Draw a doodle and search a gallery of 4,050 sketches. Our team used MobileNetV2 embeddings and cosine similarity to retrieve up to 25 visually similar drawings.</p><p>I worked on the Streamlit interface for drawing, uploading, and photographing sketches.</p><p class="stack">MobileNetV2 · OpenCV · Streamlit</p><div class="worklinks"><a href="https://sketch-match.streamlit.app/">Try the app ↗</a><a href="https://github.com/yaseradel02/SketchMatch">Repository ↗</a></div></article>
+<article class="work"><small>Predictive modeling</small><h3>Olist Delivery Time Predictor</h3><p>How long will an order take to arrive? This app estimates delivery dates using historical Brazilian e-commerce orders and the distance between buyer and seller ZIP codes.</p><p class="stack">scikit-learn · pandas · Streamlit</p><div class="worklinks"><a href="https://olist-delivery-predictor.streamlit.app/">Try the app ↗</a><a href="https://github.com/yaseradel02/Olist-ML">Repository ↗</a></div></article>
+<article class="work"><small>Exploratory data analysis</small><h3>Washington EV Registrations</h3><p>I used Washington State registration records to compare battery-electric and plug-in hybrid vehicles, then explored how Tesla registrations varied by county and model year.</p><p class="stack">pandas · Matplotlib · Seaborn</p><div class="worklinks"><a href="https://github.com/yaseradel02/Project-2---Electric-Vehicles">Repository ↗</a></div></article>
+<a class="all" href="https://github.com/yaseradel02?tab=repositories">All GitHub repositories ↗</a></div></div></section>
   <section id="about">
     <div class="wrap sec">
       <h2>About</h2>
       <div>
-        <p>I hold a BSc in Electronics Engineering (2024) and a CAPM certification (2025), and I trained intensively at the General Assembly Data Science Bootcamp (2026).</p>
-        <p>My focus is combining engineering principles with software and data analytics to solve practical problems.</p>
+        <p>I’m Yaser Adel Mahdi Abdulla, an electronics engineering graduate from the University of Bahrain. I’m currently studying data science at General Assembly Middle East.</p>
+        <p>My capstone began with a question about what a wearable can measure during sleep. I wrote firmware to collect pulse and movement readings and trained a model to recognize patterns across a night.</p>
       </div>
     </div>
   </section>
@@ -213,54 +217,23 @@ html{scroll-behavior:auto}
         </div>
         <p class="hint">Switch the view to change which skill group leads.</p>
         <div class="skills">
-          <div class="grp g-data"><h3>Data and programming</h3><ul><li>Python</li><li>SQL</li><li>Data Analysis</li><li>Data Visualization</li></ul></div>
+          <div class="grp g-data"><h3>Data and programming</h3><ul><li>Python</li><li>SQL</li><li>pandas</li><li>scikit-learn</li><li>TensorFlow / Keras</li></ul></div>
           <div class="grp g-app"><h3>Applications and integration</h3><ul><li>Streamlit</li><li>LLM Integration</li><li>API Integration</li></ul></div>
-          <div class="grp g-eng"><h3>Engineering and delivery</h3><ul><li>Electronics Engineering</li><li>Project Management (CAPM)</li></ul></div>
+          <div class="grp g-eng"><h3>Engineering and delivery</h3><ul><li>C++</li><li>Sensor integration</li><li>Bluetooth LE</li><li>Project Management (CAPM)</li></ul></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projects">
-    <div class="wrap sec">
-      <h2>Projects</h2>
-      <div>
-        <article class="proj">
-          <div>
-            <h3>Recipe Manager</h3>
-            <p class="tools"><b>Built with</b><br>Python, Streamlit, LLMs, APIs, Pandas</p>
-          </div>
-          <div>
-            <p>An interactive Streamlit application that processes structured CSV data, connects to external APIs and integrates LLM capabilities to streamline recipe selection and generation.</p>
-            <div class="links">
-              <a class="btn" href="https://recipe-manager-hd7wuh6i8vepa8t523gmgx.streamlit.app/" target="_blank" rel="noopener noreferrer">Live demo<span class="vh"> (opens in a new tab)</span></a>
-              <a class="btn ghost" href="https://github.com/yaseradel02/Recipe-Manager" target="_blank" rel="noopener noreferrer">GitHub repository<span class="vh"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </article>
-        <article class="proj">
-          <div>
-            <h3>EV Analysis</h3>
-            <p class="tools"><b>Built with</b><br>Python, Pandas, Matplotlib, Seaborn, Data Visualization</p>
-          </div>
-          <div>
-            <p>An exploratory data analysis of the Washington State Electric Vehicle dataset, evaluating market trends with a specific analytical focus on Tesla adoption patterns across counties.</p>
-            <div class="links">
-              <a class="btn ghost" href="https://github.com/yaseradel02/Project-2---Electric-Vehicles" target="_blank" rel="noopener noreferrer">GitHub repository<span class="vh"> (opens in a new tab)</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
+
 
   <section id="background">
     <div class="wrap sec">
       <h2>Education and certifications</h2>
       <ol class="tl">
-        <li><time datetime="2026">2026</time><span>General Assembly Data Science Bootcamp</span></li>
+        <li><time datetime="2026-09">Sep 2026 – present</time><span>Data Science Program · General Assembly Middle East</span></li>
         <li><time datetime="2025">2025</time><span>Certified Associate in Project Management (CAPM)</span></li>
-        <li><time datetime="2024">2024</time><span>BSc in Electronics Engineering</span></li>
+        <li><time datetime="2024">2024</time><span>BSc in Electronics Engineering · University of Bahrain</span></li>
       </ol>
     </div>
   </section>
@@ -310,13 +283,14 @@ html{scroll-behavior:auto}
   var themeBtn = document.getElementById('theme');
   function setTheme(t) {
     root.setAttribute('data-theme', t);
-    themeBtn.setAttribute('aria-checked', t === 'light' ? 'true' : 'false');
-    save('theme', t);
+    themeBtn.setAttribute('aria-checked', t === 'dark' ? 'true' : 'false');
   }
   themeBtn.addEventListener('click', function () {
-    setTheme(root.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    setTheme(next);
+    save('portfolio-theme-choice', next);
   });
-  setTheme(load('theme') === 'light' ? 'light' : 'dark');
+  setTheme(load('portfolio-theme-choice') === 'dark' ? 'dark' : 'light');
 
   document.getElementById('year').textContent = new Date().getFullYear();
 })();
